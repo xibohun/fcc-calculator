@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+@import
+url("https://fonts/googleapis.com/family=Roboto&display=swap");
+
+
+* {
+    box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator {
+    width: 240px;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px, 2px, 5px, rgba(0, 0, 0, 0.5)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.display{
+    width: 100%;
+    text-align: right;
+    background-color: pink;
+    padding:10px;
+    font-size: 30px;
+    height: 60px;
+    position: relative;
+    margin-top: 10px;
+    
+
 }
 
-.App-link {
-  color: #61dafb;
+.display small{
+    font-size: 12px;
+    position: absolute;
+    color: #EE9406;
+    top: 5px;
+    right: 5px;
+
+
+}
+button {
+    border: none;
+    border-radius: 50v;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active{
+    transform: scale(0.98)
 }
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    opacity: 0.9;
+}
+button.big-v{
+    height: 110px;
+    border-radius: 50px;
+}
+
+button.big-h{
+    width: 110px;
+    border-radius: 50px;
+}
+
+button.orange{
+    background-color: EE9406;
+    color: #fff;
+
+}
+button.light-gray{
+    background-color: #323232;
+    color: #fff;
+
+}
+button.dark-gray{
+    background-color: A5A5A5;
+
+
+
+}
+.nums-container{
+    width: 75%;
+}
+.ops-container{
+    width: 25%;
+}
+button.ac{
+    margin-right: 50%;
+}
+
+
+
+
+
